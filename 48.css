@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 1px 0 20px;
+    font-family: "Times New Roman", serif;
+    background: #fff;
+    color: #222;
+}
+
+.container {
+    width: 684px;
+    height: 672px;
+    margin: 20px auto;
+    padding: 4px 20px 12px;
+    overflow-y: auto;
+    background-color: #99ccff;
+    border: 2px solid #3366cc;
+}
+
+.logo {
+    display: block;
+    width: 285px;
+    height: 75px;
+    object-fit: contain;
+    margin: 0 auto 30px;
+}
+
+h2 {
+    margin: 0 0 20px;
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+}
+
+.subtitle {
+    margin: 0 0 3px;
+    text-align: center;
+    font-size: 16px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+td {
+    padding: 2px 0;
+    vertical-align: middle;
+    font-size: 16px;
+}
+
+.label {
+    width: 180px;
+    padding-right: 30px;
+    white-space: nowrap;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+    height: 22px;
+    padding: 1px 3px;
+    font: 14px Arial, sans-serif;
+}
+
+.name-fields,
+.location-fields {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+}
+
+.name-fields input {
+    width: 112px;
+    min-width: 0;
+}
+
+.name-fields label,
+.location-fields label {
+    flex: 0 0 auto;
+}
+
+.address-input {
+    width: 200px;
+}
+
+.city-input {
+    width: 142px;
+}
+
+.state-input {
+    width: 40px;
+}
+
+.zip-input {
+    width: 70px;
+}
+
+.full-input {
+    width: 200px;
+}
+
+select {
+    width: 115px;
+}
+
+.choice-grid {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    row-gap: 1px;
+    align-items: center;
+}
+
+.choice-grid label {
+    white-space: nowrap;
+}
+
+.choice-grid input {
+    vertical-align: middle;
+    margin: 3px 3px 3px 4px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #777;
+    margin: 9px 0;
+}
+
+textarea {
+    display: block;
+    width: 100%;
+    height: 100px;
+    resize: none;
+    font: 14px Arial, sans-serif;
+}
+
+.comments-label {
+    vertical-align: top;
+    padding-top: 8px;
+}
+
+.buttons {
+    padding-top: 6px;
+    text-align: center;
+}
+
+button {
+    margin: 0 2px;
+    padding: 3px 10px;
+    font: 13px Arial, sans-serif;
+    cursor: pointer;
+}
+
+@media (max-width: 720px) {
+    .container {
+        width: calc(100% - 16px);
+    }
+
+    table {
+        min-width: 600px;
+    }
+}
+.system-label {
+    width: 220px;
+}
