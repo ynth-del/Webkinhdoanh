@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Classifieds Search Form</title>
+    <link rel="stylesheet" href="49.css">
+</head>
+<body>
+
+<div class="form-container">
+    <h2 class="title">Online Classifieds Search Form</h2>
+    <hr>
+    
+    <form id="classifiedForm">
+        <!-- Mục 1: Chọn Section -->
+        <div class="section-title">
+            1) Search for a classified in the following sections:
+        </div>
+        <table class="table-section-1">
+            <tr>
+                <td>
+                    <label>
+                        <input type="radio" name="section" value="Employment">
+                        Employment
+                    </label>
+                </td>
+                <td>
+                    <label>
+                        <input type="radio" name="section" value="Personal">
+                        Personal
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        <input type="radio" name="section" value="For Sale" checked>
+                        For Sale
+                    </label>
+                </td>
+                <td>
+                    <label>
+                        <input type="radio" name="section" value="Miscellaneous">
+                        Miscellaneous
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        <input type="radio" name="section" value="Housing">
+                        Housing
+                    </label>
+                </td>
+                <td>
+                    <label>
+                        <input type="radio" name="section" value="All of the above">
+                        All of the above
+                    </label>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Mục 2: Chọn Publication -->
+        <div class="section-title">
+            2) Search the following publications:
+        </div>
+        <table class="table-section-2">
+            <tr>
+                <td class="col-1">
+                    <label>
+                        <input type="checkbox" name="pub" value="Midwest times" checked>
+                        Midwest times
+                    </label>
+                </td>
+                <td class="col-2">
+                    <label>
+                        <input type="checkbox" name="pub" value="Modern News">
+                        Modern News
+                    </label>
+                </td>
+                <td>
+                    <label>
+                        <input type="checkbox" name="pub" value="Employment Today">
+                        Employment Today
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        <input type="checkbox" name="pub" value="Great Lakes Classifieds" checked>
+                        Great Lakes Classifieds
+                    </label>
+                </td>
+                <td>
+                    <label>
+                        <input type="checkbox" name="pub" value="Middleton Daily">
+                        Middleton Daily
+                    </label>
+                </td>
+                <td>
+                    <label>
+                        <input type="checkbox" name="pub" value="Cashtown Daily News">
+                        Cashtown Daily News
+                    </label>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Mục 3: Khoảng thời gian -->
+        <div class="section-title">
+            3) From to
+            <input type="text" name="fromDate" placeholder="mm/dd/yy" class="input-date">
+            to
+            <input type="text" name="toDate" placeholder="mm/dd/yy" class="input-date">.
+        </div>
+
+        <!-- Mục 4: Từ khóa -->
+        <div class="section-title">
+            4) Enter a few keywords to describe the classified.
+        </div>
+        <div class="input-keyword-wrapper">
+            <input type="text" id="keywords" name="keywords">
+        </div>
+
+        <!-- Mục 5: Các nút thao tác -->
+        <div class="section-title">
+            5) Click one of the options below:
+        </div>
+        <div class="button-group">
+            <button type="button" class="btn-item" onclick="handleSearch()">
+                <img src="Search.gif" alt="Search">
+            </button>
+
+            <button type="button" class="btn-item" onclick="handleHelp()">
+                <img src="Help.gif" alt="Help">
+            </button>
+
+            <button type="button" class="btn-item" onclick="handleCancel()">
+                <img src="Cancel.gif" alt="Cancel">
+            </button>
+        </div>
+    </form>
+</div>
+
+<script>
+    // Xử lý nút Search
+    function handleSearch() {
+        var kw = document.getElementById("keywords").value.trim();
+        if (kw === "") {
+            alert("Đang tìm kiếm tất cả các mục phân loại phù hợp...");
+        } else {
+            alert('Đang tìm kiếm với từ khóa: "' + kw + '"');
+        }
+    }
+
+    // Xử lý nút Help
+    function handleHelp() {
+        var helpWindow = window.open("", "HelpWindow", "width=420,height=300");
+        if (!helpWindow) {
+            alert("Trình duyệt đang chặn cửa sổ popup!");
+            return;
+        }
+        helpWindow.document.title = "Trợ giúp tìm kiếm";
+        helpWindow.document.body.innerHTML = `
+            <div style="font-family: Arial; padding: 20px; line-height: 1.6;">
+                <h3 style="color: #0055d4; margin-top: 0;">Hướng dẫn tìm kiếm</h3>
+                <p>• <b>Bước 1:</b> Chọn phân mục cần tìm.</p>
+                <p>• <b>Bước 2:</b> Tích chọn các báo xuất bản.</p>
+                <p>• <b>Bước 3:</b> Nhập ngày bắt đầu và kết thúc.</p>
+                <p>• <b>Bước 4:</b> Nhập từ khóa mô tả và bấm <b>Search</b>.</p>
+            </div>
+        `;
+    }
+
+    // Xử lý nút Cancel
+    function handleCancel() {
+        var form = document.getElementById("classifiedForm");
+        var inputs = form.querySelectorAll("input");
+        inputs.forEach(function(input) {
+            if (input.type === "text") {
+                input.value = "";
+            } else if (input.type === "radio" || input.type === "checkbox") {
+                input.checked = false;
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

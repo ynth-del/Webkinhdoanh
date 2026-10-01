@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    margin: 30px;
+}
+
+/* Khung viền chứa Form */
+.form-container {
+    width: 580px;
+    margin: 0 auto;
+    background-color: #d8fbfd;
+    border: 2px solid #0055d4;
+    padding: 20px 25px;
+}
+
+/* Tiêu đề chính */
+h2.title {
+    color: red;
+    font-size: 22px;
+    margin: 0 0 10px 0;
+    font-weight: bold;
+}
+
+/* Đường gạch ngang phân cách */
+hr {
+    border: none;
+    border-top: 1px solid #7ea6a6;
+    margin-bottom: 15px;
+}
+
+/* Tiêu đề từng mục */
+.section-title {
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    color: #000;
+}
+
+/* Bảng canh lề */
+table {
+    border-collapse: collapse;
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+.table-section-1 {
+    width: 60%;
+}
+
+.table-section-2 {
+    width: 100%;
+}
+
+.table-section-2 .col-1 {
+    width: 38%;
+}
+
+.table-section-2 .col-2 {
+    width: 30%;
+}
+
+td {
+    padding: 2px 4px;
+    vertical-align: middle;
+}
+
+label {
+    cursor: pointer;
+}
+
+/* Định dạng ô nhập văn bản */
+input[type="text"] {
+    border: 1px solid #7f9db9;
+    padding: 3px 5px;
+    font-size: 13px;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.input-date {
+    width: 130px;
+}
+
+.input-keyword-wrapper {
+    margin-top: 5px;
+}
+
+.input-keyword-wrapper input[type="text"] {
+    width: 100%;
+}
+
+/* Cụm nút bấm ảnh */
+.button-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    margin-top: 10px;
+}
+
+.btn-item {
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+.btn-item img {
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+}
