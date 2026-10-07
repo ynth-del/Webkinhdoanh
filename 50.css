@@ -1,0 +1,91 @@
+body {
+    font-family: "Times New Roman", serif;
+    background-color: white;
+}
+
+.container {
+    width: 630px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #c9ffff;
+    border: 2px solid blue;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.logo img {
+    width: 400px;
+    height: 80px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid gray;
+}
+
+.form-group {
+    margin: 14px 0;
+}
+
+input[type="text"] {
+    height: 20px;
+}
+
+textarea {
+    width: 385px;
+    height: 55px;
+    resize: none;
+    vertical-align: top;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th,
+td {
+    border: 1px solid gray;
+    padding: 2px 5px;
+    text-align: center;
+}
+
+th {
+    font-weight: bold;
+}
+
+table input {
+    box-sizing: border-box;
+}
+
+.date {
+    width: 65px;
+}
+
+.description {
+    width: 150px;
+}
+
+.amount {
+    width: 45px;
+}
+
+select {
+    height: 23px;
+}
+
+button {
+    margin-right: 5px;
+}
+
+.footer {
+    margin-top: 15px;
+}
+
